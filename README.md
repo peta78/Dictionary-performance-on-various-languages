@@ -113,11 +113,11 @@ Or on computer HP Laptop 14-dq0xxx with 4GB RAM memory and [Intel® Celeron(R) N
 |                   [perl](https://www.perl.org/)                   | This is perl 5, version 34, subversion 0 (v5.34.0) built for x86_64-linux-gnu-thread-multi |                   13.678                   |         13.307         |           25.698          |            46.211            |
 |                       [go](https://go.dev/)                       |                              go version go1.21.4 linux/amd64                               |                   14.931                   |         10.046         |           37.158          |            48.454            |
 
-Note: if you run this script (./run.sh), make sure nothing else is running on your machine until the end, or it can influence end results. I quit all other software before running it and set power savings on 'Never' temporarily.
-
 ![HP1](./images/hp_perfcomp_final.png)
 ![HP2](./images/hp_cpumem1.png)
 ![HP3](./images/hp_perfcomp1.png)
+
+Note: if you run this script (./run.sh), make sure nothing else is running on your machine until the end, or it can influence end results. I quit all other software before running it and set power savings on 'Never' temporarily.
 
 [^1]: Includes Operating System
 
