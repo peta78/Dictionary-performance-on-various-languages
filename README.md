@@ -1,6 +1,6 @@
 # Performance of various programming languages on basic dictionary + random generation operations
 
-Comparing [various programming languages](https://www.frisky.world/2020/01/my-favorite-programming-languages.html) on a [dictionary](https://en.wikipedia.org/wiki/Associative_array) and [random generation operations](https://en.wikipedia.org/wiki/Linear_congruential_generator) - performance of language (lower is better) on [machine](https://www.frisky.world/2020/11/testing-nvidia-geforce-rtx-3090.html) with main components:
+Comparing various programming languages on a [dictionary](https://en.wikipedia.org/wiki/Associative_array) and [random generation operations](https://en.wikipedia.org/wiki/Linear_congruential_generator) - performance of language (lower is better) on a machine:
 
 * Motherboard: [MPG B550 GAMING CARBON WIFI motherboard](https://www.msi.com/Motherboard/MPG-B550-GAMING-CARBON-WIFI)
 * CPU: [AMD Ryzen 5 3600X (12) @ 3.800GHz processor](https://www.amd.com/en/products/cpu/amd-ryzen-5-3600x)
