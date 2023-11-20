@@ -99,6 +99,20 @@ One of five executions:
 
 ![CPU & Mem Usage](./images/cpumem1.png)
 
+Or on HP computer:
+
+|                              Language                             |                                          Version                                           | Adjusted time based on CPU usage (seconds) | Average time (seconds) | Average CPU usage[^1] (%) | Average memory usage[^1] (%) |
+|:-----------------------------------------------------------------:|:------------------------------------------------------------------------------------------:|:------------------------------------------:|:----------------------:|:-------------------------:|:----------------------------:|
+|               custom c++              |                                           (0,0)                                            |                   0.872                    |         0.835          |           26.120          |            60.387            |
+|                 [rust](https://www.rust-lang.org/)                |                            rustc 1.74.0 (79e9716c9 2023-11-13)                             |                   4.341                    |         4.204          |           25.811          |            43.058            |
+|                   [pypy](https://www.pypy.org/)                   |                    Python 2.7.18 (7.3.9+dfsg-1, Apr 01 2022, 21:40:34)                     |                   4.348                    |         4.176          |           26.034          |            41.867            |
+|         [c++](https://www.w3schools.com/cpp/cpp_intro.asp)        |                         g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0                          |                   4.789                    |         4.586          |           26.110          |            43.937            |
+|            [c#](https://cs.wikipedia.org/wiki/C_Sharp)            |                                          8.0.100                                           |                   5.388                    |         5.097          |           26.427          |            44.110            |
+|       [javascript](https://jv.wikipedia.org/wiki/JavaScript)      |                                          v12.22.9                                          |                   8.122                    |         7.068          |           28.728          |            45.843            |
+| [java](https://en.wikipedia.org/wiki/Java_(programming_language)) |                                openjdk 18.0.2-ea 2022-07-19                                |                   11.259                   |         4.847          |           58.074          |            51.289            |
+|                   [perl](https://www.perl.org/)                   | This is perl 5, version 34, subversion 0 (v5.34.0) built for x86_64-linux-gnu-thread-multi |                   13.678                   |         13.307         |           25.698          |            46.211            |
+|                       [go](https://go.dev/)                       |                              go version go1.21.4 linux/amd64                               |                   14.931                   |         10.046         |           37.158          |            48.454            |
+
 Note: if you run this script (./run.sh), make sure nothing else is running on your machine until the end, or it can influence end results. I quit all other software before running it and set power savings on 'Never' temporarily.
 
 [^1]: Includes Operating System
