@@ -99,7 +99,7 @@ One of five executions:
 
 ![CPU & Mem Usage](./images/cpumem1.png)
 
-Or on computer [HP Laptop 14-dq0xxx](https://support.hp.com/us-en/document/c08172990) with 4GB RAM memory and [Intel® Celeron(R) N4120 CPU](https://www.intel.com/content/www/us/en/products/sku/197309/intel-celeron-processor-n4120-4m-cache-up-to-2-60-ghz/specifications.html):
+Or on computer [HP Laptop 14-dq0xxx](https://support.hp.com/us-en/document/c08172990) with 4GB RAM memory and [Intel® Celeron(R) N4120 CPU](https://www.intel.com/content/www/us/en/products/sku/197309/intel-celeron-processor-n4120-4m-cache-up-to-2-60-ghz/specifications.html) on [Ubuntu](https://ubuntu.com/):
 
 |                              Language                             |                                          Version                                           | Adjusted time based on CPU usage (seconds) | Average time (seconds) | Average CPU usage[^1] (%) | Average memory usage[^1] (%) |
 |:-----------------------------------------------------------------:|:------------------------------------------------------------------------------------------:|:------------------------------------------:|:----------------------:|:-------------------------:|:----------------------------:|
