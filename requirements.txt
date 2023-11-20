@@ -1,0 +1,6 @@
+PrettyTable
+psutil
+matplotlib
+pandas
+distro
+google
