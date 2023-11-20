@@ -1,0 +1,15 @@
+
+Lower is better - on [Manjaro Linux](https://manjaro.org/) 
+Linux-5.15.32-1-MANJARO-x86_64-with-glibc2.35 on 2022-05-02:
+
+|                        Language                        |                                        Version                                         | Adjusted time based on CPU usage (seconds) | Average time (seconds) | Average CPU usage[^1] (%) | Average memory usage[^1] (%) |
+|--------------------------------------------------------|----------------------------------------------------------------------------------------|--------------------------------------------|------------------------|---------------------------|------------------------------|
+|         [custom c++](https://www.frisky.world)         |                                         (0,0)                                          |                   0.318                    |         0.302          |           8.780           |            2.551             |
+|       [pypy](https://en.wikipedia.org/wiki/PyPy)       |    Python 2.7.18 (Apr 02 2022, 14:58:34)     |                   1.473                    |         1.395          |           8.796           |            2.073             |
+|           [rust](https://www.rust-lang.org/)           |                          rustc 1.60.0 (7737e0b5c 2022-04-04)                           |                   1.609                    |         1.574          |           8.517           |            2.003             |
+|      [c++](https://en.wikipedia.org/wiki/C%2B%2B)      |                                    g++ (GCC) 11.2.0                                    |                   1.739                    |         1.689          |           8.578           |            2.053             |
+| [c#](https://docs.microsoft.com/en-us/dotnet/csharp/)  |                                        6.0.202                                         |                   2.552                    |         2.499          |           8.509           |            2.130             |
+| [javascript](https://en.wikipedia.org/wiki/JavaScript) |                                        v17.8.0                                         |                   2.612                    |         2.392          |           9.102           |            2.088             |
+|       [perl](https://en.wikipedia.org/wiki/Perl)       | This is perl 5, version 34, subversion 1 (v5.34.1) built for x86_64-linux-thread-multi |                   5.597                    |         5.503          |           8.475           |            2.169             |
+|                 [go](https://go.dev/)                  |                            go version go1.18.1 linux/amd64                             |                   5.699                    |         3.671          |           12.938          |            2.139             |
+|            [julia](https://julialang.org/)             |                                  julia version 1.7.2                                   |                   8.217                    |         8.086          |           8.468           |            2.443             |
