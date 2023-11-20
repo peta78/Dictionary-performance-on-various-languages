@@ -99,7 +99,7 @@ One of five executions:
 
 ![CPU & Mem Usage](./images/cpumem1.png)
 
-Or on HP computer:
+Or on computer HP Laptop 14-dq0xxx with 4GB RAM memory and Intel® Celeron(R) N4120 CPU:
 
 |                              Language                             |                                          Version                                           | Adjusted time based on CPU usage (seconds) | Average time (seconds) | Average CPU usage[^1] (%) | Average memory usage[^1] (%) |
 |:-----------------------------------------------------------------:|:------------------------------------------------------------------------------------------:|:------------------------------------------:|:----------------------:|:-------------------------:|:----------------------------:|
