@@ -52,8 +52,6 @@ clean_up() {
 install_languages() {
     pkg=wget
     install_pck
-    pkg=google-chrome
-    install_pck
     pkg=python3-pip
     install_pck
     pkg=pypy
@@ -154,8 +152,4 @@ python3 compare.py
 
 cat ./results_os/md_start.md ./results_os/*.txt ./results_os/md_end.md > ./README.md
 
-google-chrome https://github.com/pepe78/python-performance &
-sleep 1
-# I need to know when it's finished, it's hard to miss B6
-google-chrome https://www.youtube.com/watch?v=G0r06nbJoQ8 &
 
