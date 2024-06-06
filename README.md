@@ -119,18 +119,17 @@ Or on computer [HP Laptop 14-dq0xxx](https://support.hp.com/us-en/document/c0817
 
 Lower is better - on Manjaro Linux and [AMD Ryzen™ 7 8845HS](https://www.amd.com/en/products/processors/laptop/ryzen/8000-series/amd-ryzen-7-8845hs.html)
 Linux-6.9.2-1-MANJARO-x86_64-with-glibc2.39 on 2024-06-06:
-
 |  Language  |                                        Version                                         | Adjusted time based on CPU usage (seconds) | Average time (seconds) | Average CPU usage[^1] (%) | Average memory usage[^1] (%) |
 | :--------: | :------------------------------------------------------------------------------------: | :----------------------------------------: | :--------------------: | :-----------------------: | :--------------------------: |
-| custom c++ |                                         (0,0)                                          |                   0.440                    |         0.295          |           9.327           |            28.946            |
-|    rust    |                          rustc 1.78.0 (9b00956e5 2024-04-29)                           |                   1.381                    |         0.924          |           9.343           |            24.828            |
-|    pypy    |                  Python 2.7.18 (6aa1e9d13975, Apr 24 2024, 01:57:47)                   |                   1.385                    |         0.926          |           9.342           |            18.342            |
-|     c#     |                                        8.0.100                                         |                   1.639                    |         1.189          |           8.617           |            18.682            |
-| javascript |                                        v22.2.0                                         |                   2.749                    |         1.741          |           9.870           |            23.310            |
-|    c++     |                               g++ (GCC) 14.1.1 20240522                                |                   2.992                    |         1.803          |           10.371          |            18.875            |
-|     go     |                            go version go1.21.4 linux/amd64                             |                   4.144                    |         2.118          |           12.227          |            19.043            |
-|   julia    |                                  julia version 1.10.3                                  |                   5.023                    |         3.381          |           9.285           |            17.028            |
-|    perl    | This is perl 5, version 38, subversion 2 (v5.38.2) built for x86_64-linux-thread-multi |                   5.076                    |         3.656          |           8.677           |            19.506            |
+| custom c++ |                                         (0,0)                                          |                   0.325                    |         0.275          |           7.387           |            25.838            |
+|    pypy    |                  Python 2.7.18 (6aa1e9d13975, Apr 24 2024, 01:57:47)                   |                   1.154                    |         0.892          |           8.079           |            20.985            |
+|    rust    |                          rustc 1.78.0 (9b00956e5 2024-04-29)                           |                   1.174                    |         0.863          |           8.508           |            19.569            |
+|     c#     |                                        8.0.100                                         |                   1.303                    |         1.152          |           7.069           |            20.551            |
+| javascript |                                        v22.2.0                                         |                   2.041                    |         1.633          |           7.812           |            20.828            |
+|    c++     |                               g++ (GCC) 14.1.1 20240522                                |                   2.350                    |         1.591          |           9.228           |            20.237            |
+|     go     |                            go version go1.21.4 linux/amd64                             |                   3.737                    |         2.148          |           10.873          |            21.459            |
+|    perl    | This is perl 5, version 38, subversion 2 (v5.38.2) built for x86_64-linux-thread-multi |                   4.441                    |         3.530          |           7.862           |            20.936            |
+|   julia    |                                  julia version 1.10.3                                  |                   4.838                    |         3.255          |           9.289           |            19.048            |
 
 Note: if you run this script (./run.sh), make sure nothing else is running on your machine until the end, or it can influence end results. I quit all other software before running it and set power savings on 'Never' temporarily.
 
