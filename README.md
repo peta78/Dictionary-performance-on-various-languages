@@ -117,8 +117,8 @@ Or on computer [HP Laptop 14-dq0xxx](https://support.hp.com/us-en/document/c0817
 ![HP2](./images/hp_cpumem1.png)
 ![HP3](./images/hp_perfcomp1.png)
 
-Lower is better - on Manjaro Linux and [AMD Ryzen™ 7 8845HS](https://www.amd.com/en/products/processors/laptop/ryzen/8000-series/amd-ryzen-7-8845hs.html)
-Linux-6.9.2-1-MANJARO-x86_64-with-glibc2.39 on 2024-06-09:
+Lower is better - on [Manjaro](https://manjaro.org/) Linux Linux-6.9.2-1-MANJARO-x86_64-with-glibc2.39 and [AMD Ryzen™ 7 8845HS](https://www.amd.com/en/products/processors/laptop/ryzen/8000-series/amd-ryzen-7-8845hs.html)
+on 2024-06-09:
 
 |                                                Language                                                |                                        Version                                         | Adjusted time based on CPU usage (seconds) | Average time (seconds) | Average CPU usage[^1] (%) | Average memory usage[^1] (%) |
 | :----------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :----------------------------------------: | :--------------------: | :-----------------------: | :--------------------------: |
