@@ -12,6 +12,10 @@ which_install_soft() {
     if [[ ! -z $WHICH_CMD ]]; then
     	answer=2
     fi
+    WHICH_CMD=$(which apk)
+    if [[ ! -z $WHICH_CMD ]]; then
+    	answer=3
+    fi
 }
 
 install_pck() {
@@ -28,6 +32,9 @@ install_pck() {
                 ;;
             2)
                 sudo pacman -S $pkg
+                ;;
+            3)
+                sudo apk add $pkg
                 ;;
         esac
     fi
@@ -50,6 +57,8 @@ clean_up() {
 }
 
 install_languages() {
+    pkg=sudo
+    install_pck
     pkg=wget
     install_pck
     pkg=python3-pip
@@ -67,8 +76,16 @@ install_languages() {
     install_pck
     pkg=nodejs
     install_pck
-
-    pip3 install --upgrade -r requirements.txt
+    pkg=py3-PrettyTable
+    install_pck
+    pkg=py3-psutil
+    install_pck
+    pkg=py3-matplotlib
+    install_pck
+    pkg=py3-pandas
+    install_pck
+    pkg=py3-distro
+    install_pck
 
     # https://go.dev/dl/
     if [ ! -f ./go1.22.4.linux-amd64.tar.gz ]; then
