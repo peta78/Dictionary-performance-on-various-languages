@@ -61,14 +61,12 @@ install_languages() {
     install_pck
     pkg=wget
     install_pck
-    pkg=python3-pip
-    install_pck
     pkg=pypy
     install_pck
     pkg=g++
     install_pck
     # https://openjdk.java.net/projects/jdk/
-    pkg=openjdk-18-jdk
+    pkg=openjdk-22-jdk
     install_pck
     pkg=curl
     install_pck
@@ -76,7 +74,7 @@ install_languages() {
     install_pck
     pkg=nodejs
     install_pck
-    pkg=py3-PrettyTable
+    pkg=py3-prettytable
     install_pck
     pkg=py3-psutil
     install_pck
@@ -88,18 +86,18 @@ install_languages() {
     install_pck
 
     # https://go.dev/dl/
-    if [ ! -f ./go1.22.4.linux-amd64.tar.gz ]; then
-        wget https://go.dev/dl/go1.22.4.linux-amd64.tar.gz
+    if [ ! -f ./go1.23.1.linux-amd64.tar.gz ]; then
+        wget https://go.dev/dl/go1.23.1.linux-amd64.tar.gz
     fi
     rm -rf ./go
-    tar -C ./ -xzf go1.22.4.linux-amd64.tar.gz
+    tar -C ./ -xzf go1.23.1.linux-amd64.tar.gz
 
     # https://dotnet.microsoft.com/en-us/download/dotnet
-    if [ ! -f ./dotnet-sdk-8.0.100-linux-x64.tar.gz ]; then
-        wget https://download.visualstudio.microsoft.com/download/pr/5226a5fa-8c0b-474f-b79a-8984ad7c5beb/3113ccbf789c9fd29972835f0f334b7a/dotnet-sdk-8.0.100-linux-x64.tar.gz
+    if [ ! -f ./dotnet-sdk-8.0.401-linux-x64.tar.gz ]; then
+        wget https://download.visualstudio.microsoft.com/download/pr/db901b0a-3144-4d07-b8ab-6e7a43e7a791/4d9d1b39b879ad969c6c0ceb6d052381/dotnet-sdk-8.0.401-linux-x64.tar.gz
     fi
     mkdir ./dotnet
-    tar zxf dotnet-sdk-8.0.100-linux-x64.tar.gz -C ./dotnet
+    tar zxf dotnet-sdk-8.0.401-linux-x64.tar.gz -C ./dotnet
     export DOTNET_ROOT=./dotnet
     export PATH=$PATH:./dotnet
 
