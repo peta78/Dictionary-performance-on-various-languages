@@ -22,3 +22,7 @@ Lower is better - on operating system Alpine Linux (Linux-6.6.50-0-lts-x86_64) o
 One of the runs:
 
 ![comp](./images/cpumem1.png)
+
+And on Manjaro Linux:
+
+![comp](./images/perfcomp_final_manjaro.png)
