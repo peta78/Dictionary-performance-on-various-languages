@@ -8,10 +8,9 @@ Custom C++ (maincustom.c++) is just to show that in C++ you can often write your
 
 ![comp](./images/perfcomp_final.png)
 
-Lower is better - on operating system 
-Linux-6.6.50-0-lts-x86_64-with on 2024-09-12:
+Lower is better - on operating system Alpine Linux (Linux-6.6.50-0-lts-x86_64) on 2024-09-12:
 
-|       Language       |                     Version                     | Adjusted time based on CPU usage (seconds) | Average time (seconds) | Average CPU usage[^1] (%) | Average memory usage[^1] (%) |
+|       Language       |                     Version                     | Adjusted time based on CPU usage (seconds) | Average time (seconds) | Average CPU usage (%) | Average memory usage (%) |
 |----------------------|-------------------------------------------------|--------------------------------------------|------------------------|---------------------------|------------------------------|
 | custom c++ |                      (0,0)                      |                   0.541                    |         0.476          |           7.103           |            26.341            |
 |     c#     |                     8.0.401                     |                   1.317                    |         1.077          |           7.645           |            21.842            |
