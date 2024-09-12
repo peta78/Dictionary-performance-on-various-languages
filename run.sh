@@ -93,11 +93,11 @@ install_languages() {
     tar -C ./ -xzf go1.23.1.linux-amd64.tar.gz
 
     # https://dotnet.microsoft.com/en-us/download/dotnet
-    if [ ! -f ./dotnet-sdk-8.0.401-linux-x64.tar.gz ]; then
-        wget https://download.visualstudio.microsoft.com/download/pr/db901b0a-3144-4d07-b8ab-6e7a43e7a791/4d9d1b39b879ad969c6c0ceb6d052381/dotnet-sdk-8.0.401-linux-x64.tar.gz
+    if [ ! -f ./dotnet-sdk-8.0.401-linux-musl-x64.tar.gz ]; then
+        wget https://download.visualstudio.microsoft.com/download/pr/3ce68ecc-a007-4d15-9196-79ced76a154a/6a45f69bb5c24576abeea048cea09987/dotnet-sdk-8.0.401-linux-musl-x64.tar.gz
     fi
     mkdir ./dotnet
-    tar zxf dotnet-sdk-8.0.401-linux-x64.tar.gz -C ./dotnet
+    tar zxf dotnet-sdk-8.0.401-linux-musl-x64.tar.gz -C ./dotnet
     export DOTNET_ROOT=./dotnet
     export PATH=$PATH:./dotnet
 
@@ -135,7 +135,7 @@ get_language_versions
 python3 cpuusage.py &
 PID=$!
 
-for i in {1..5}
+for i in $(seq 5)
 do
     echo 'Round' $i
     sleep 1

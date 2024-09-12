@@ -4,18 +4,19 @@ from datetime import datetime, date, timedelta
 from dateutil import parser
 import matplotlib.pyplot as plt
 import pandas as pd
-from prettytable import PrettyTable, MARKDOWN
+from prettytable import PrettyTable
 import distro
 import platform
-from googlesearch import search
+#from googlesearch import search
 
 def geturl(lang, what):
-    if lang == "custom c++":
-        return "[custom c++](https://www.randomguy.info)"
-    query = "{} {}".format(lang, what)
+    return what
+    #if lang == "custom c++":
+    #    return "[custom c++](https://www.randomguy.info)"
+    #query = "{} {}".format(lang, what)
 
-    for j in search(query, tld="co.in", num=1, stop=1, pause=2):
-        return "[{}]({})".format(lang,j)
+    #for j in search(query, tld="co.in", num=1, stop=1, pause=2):
+    #    return "[{}]({})".format(lang,j)
 
 def process(fn):
     f = open(fn, 'rt')
@@ -188,7 +189,8 @@ f = open("./results_os/{}.txt".format(get_name()), "wt")
 f.write('\n')
 f.write(yy)
 f.write('\n')
-x.set_style(MARKDOWN)
+# https://github.com/jazzband/prettytable/issues/50
+# x.set_style(MARKDOWN)
 f.write(x.get_string())
 f.write('\n')
 f.close()
