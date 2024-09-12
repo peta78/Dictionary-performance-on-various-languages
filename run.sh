@@ -65,8 +65,7 @@ install_languages() {
     install_pck
     pkg=g++
     install_pck
-    # https://openjdk.java.net/projects/jdk/
-    pkg=openjdk-22-jdk
+    pkg=jdk-openjdk
     install_pck
     pkg=curl
     install_pck
@@ -84,6 +83,8 @@ install_languages() {
     install_pck
     pkg=py3-distro
     install_pck
+
+    pip install -r requirements.txt
 
     # https://go.dev/dl/
     if [ ! -f ./go1.23.1.linux-amd64.tar.gz ]; then
