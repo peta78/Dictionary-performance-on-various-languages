@@ -10,7 +10,7 @@ import platform
 #from googlesearch import search
 
 def geturl(lang, what):
-    return what
+    return lang
     #if lang == "custom c++":
     #    return "[custom c++](https://www.randomguy.info)"
     #query = "{} {}".format(lang, what)
