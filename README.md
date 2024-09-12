@@ -19,3 +19,7 @@ Linux-6.6.50-0-lts-x86_64-with on 2024-09-12:
 |    c++     | g++ (Alpine 13.2.1_git20240309) 13.2.1 20240309 |                   2.314                    |         1.942          |           7.448           |            21.227            |
 | javascript |                     v20.15.1                    |                   2.642                    |         2.081          |           7.937           |            21.443            |
 |     go     |         go version go1.23.1 linux/amd64         |                   3.775                    |         2.300          |           10.258          |            21.836            |
+
+One of the runs:
+
+![comp](./images/cpumem1.png)
