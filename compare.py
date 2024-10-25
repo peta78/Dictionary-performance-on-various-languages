@@ -1,13 +1,19 @@
 from os import listdir, cpu_count
 from os.path import isfile, join
 from datetime import datetime, date, timedelta
-from dateutil import parser
 import matplotlib.pyplot as plt
 import pandas as pd
 from prettytable import PrettyTable
 import distro
 import platform
 #from googlesearch import search
+
+def procdt(inp):
+    inp = inp.replace('\n','')
+    p = inp.index('.')
+    inp = inp[:p+4]
+
+    return datetime.strptime(inp, "%Y-%m-%d %H:%M:%S.%f")
 
 def geturl(lang, what):
     return lang
@@ -28,10 +34,10 @@ def process(fn):
     ret.append(fn.replace('.perf',''))
     ret2.append(fn.replace('.perf',''))
     for i in range(len(lines)-1):
-        ret.append((parser.parse(lines[i+1].replace('\n',''))-parser.parse(lines[i].replace('\n',''))).total_seconds())
+        ret.append(procdt(lines[i+1]).total_seconds()-procdt(lines[i]).total_seconds())
 
-    ret2.append(parser.parse(lines[0].replace('\n','')))
-    ret2.append(parser.parse(lines[-1].replace('\n','')))
+    ret2.append(procdt(lines[0]))
+    ret2.append(procdt(lines[-1]))
     return ret, ret2
 
 def readusage():
@@ -45,7 +51,7 @@ def readusage():
 
     for l in lines:
         tmp = l.split(',')
-        t.append(parser.parse(tmp[0]))
+        t.append(procdt(tmp[0]))
         c.append(float(tmp[1]))
         m.append(float(tmp[2]))
 
