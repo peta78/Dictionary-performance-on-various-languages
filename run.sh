@@ -140,6 +140,7 @@ get_language_versions() {
     dotnet --version >> c#.version
     julia --version >> julia.version
     node --version >> javascript.version
+    python3 --version >> python3.version
 }
 
 clean_up
@@ -173,6 +174,8 @@ do
     julia main.julia >> julia.perf$i
     sleep 1
     node main.js >> javascript.perf$i
+    sleep 1
+    python3 main.py >> python3.version
 done
 
 sleep 1
