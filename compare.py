@@ -13,7 +13,9 @@ def procdt(inp):
     p = inp.index('.')
     inp = inp[:p+4]
 
-    return datetime.strptime(inp, "%Y-%m-%d %H:%M:%S.%f")
+    ret = datetime.strptime(inp, "%Y-%m-%d %H:%M:%S.%f")
+
+    return ret
 
 def geturl(lang, what):
     return lang
@@ -33,11 +35,14 @@ def process(fn):
 
     ret.append(fn.replace('.perf',''))
     ret2.append(fn.replace('.perf',''))
+
     for i in range(len(lines)-1):
-        ret.append(procdt(lines[i+1]).total_seconds()-procdt(lines[i]).total_seconds())
+        tmp = (procdt(lines[i+1])-procdt(lines[i])).total_seconds()
+        ret.append(tmp)
 
     ret2.append(procdt(lines[0]))
     ret2.append(procdt(lines[-1]))
+
     return ret, ret2
 
 def readusage():
@@ -110,9 +115,13 @@ while True:
     stats = []
     dic = {}
     times = []
+
     for fn in perffiles:
         try:
             ret, ret2 = process(fn)
+
+            print(ret2)
+
             stats.append(ret)
             dic[ret2[0]] = [ret2[1], ret2[2]]
             times.append(ret2[1])
