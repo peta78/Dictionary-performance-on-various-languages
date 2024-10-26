@@ -175,7 +175,7 @@ do
     sleep 1
     node main.js >> javascript.perf$i
     sleep 1
-    python3 main.py >> python3.version
+    python3 main.py >> python3.perf$i
 done
 
 sleep 1
