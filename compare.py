@@ -182,7 +182,10 @@ final = []
 ff = []
 for r in results:
     final.append([r[0], r[1][0], r[1][1], r[1][2], r[1][3]])
-    ff.append([r[0], r[1][0]])
+
+    print('***', r[0], r[1][0])
+
+    ff.append([r[0] +'\n' + getLangVer(r[0])[:12], r[1][0]])
 
 final = sorted(final, key=lambda s: s[1])
 
