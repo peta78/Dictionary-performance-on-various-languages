@@ -100,8 +100,14 @@ def getLangVer(lang):
         f.close()
     except:
         pass
+
+    retnoletters = ''
+
+    for l in ret:
+        if not((l>='a' and l<='z') or (l>='A' and l<='Z')):
+            retnoletters += l
     
-    return ret
+    return retnoletters
 
 today = date.today()
 dicAll = {}

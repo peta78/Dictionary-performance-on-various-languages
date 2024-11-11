@@ -87,22 +87,22 @@ install_languages() {
     pip install -r requirements.txt
 
     # https://go.dev/dl/
-    if [ ! -f ./go1.23.1.linux-amd64.tar.gz ]; then
-        wget https://go.dev/dl/go1.23.1.linux-amd64.tar.gz
+    if [ ! -f ./go1.23.3.linux-amd64.tar.gz ]; then
+        wget https://go.dev/dl/go1.23.3.linux-amd64.tar.gz
     fi
     rm -rf ./go
-    tar -C ./ -xzf go1.23.1.linux-amd64.tar.gz
+    tar -C ./ -xzf go1.23.3.linux-amd64.tar.gz
 
 
     # https://dotnet.microsoft.com/en-us/download/dotnet
     which_install_soft
     case $answer in
         2)
-            if [ ! -f ./dotnet-sdk-8.0.401-linux-x64.tar.gz ]; then
-                wget https://download.visualstudio.microsoft.com/download/pr/db901b0a-3144-4d07-b8ab-6e7a43e7a791/4d9d1b39b879ad969c6c0ceb6d052381/dotnet-sdk-8.0.401-linux-x64.tar.gz
+            if [ ! -f ./dotnet-sdk-8.0.403-linux-x64.tar.gz ]; then
+                wget https://download.visualstudio.microsoft.com/download/pr/ca6cd525-677e-4d3a-b66c-11348a6f920a/ec395f498f89d0ca4d67d903892af82d/dotnet-sdk-8.0.403-linux-x64.tar.gz
             fi
             mkdir ./dotnet
-            tar zxf dotnet-sdk-8.0.401-linux-x64.tar.gz -C ./dotnet
+            tar zxf dotnet-sdk-8.0.403-linux-x64.tar.gz -C ./dotnet
             ;;
         3)
             if [ ! -f ./dotnet-sdk-8.0.401-linux-musl-x64.tar.gz ]; then
