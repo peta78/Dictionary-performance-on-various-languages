@@ -34,7 +34,7 @@ install_pck() {
                 sudo pacman -S $pkg
                 ;;
             3)
-                sudo apk add $pkg
+                apk add $pkg
                 ;;
         esac
     fi
@@ -57,6 +57,8 @@ clean_up() {
 }
 
 install_languages() {
+    pkg=python3
+    install_pck
     pkg=sudo
     install_pck
     pkg=wget
