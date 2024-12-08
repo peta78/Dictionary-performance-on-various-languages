@@ -1,8 +1,0 @@
-
-Lower is better - on [Windows 11](https://www.microsoft.com/en-us/windows/windows-11) compiled to Release version with [Visual Studio Community](https://visualstudio.microsoft.com/vs/community/)[^2] on 2022-05-06:
-
-|                        Language                       | Version | Adjusted time based on CPU usage (seconds) | Average time (seconds) | Average CPU usage[^1] (%) | Average memory usage[^1] (%) |
-|-------------------------------------------------------|---------|--------------------------------------------|------------------------|---------------------------|------------------------------|
-|         custom c++        |  (0,0)  |                   0.451                    |         0.419          |           8.969           |            6.166             |
-| [c#](https://docs.microsoft.com/en-us/dotnet/csharp/) | 6.0.202 |                   1.679                    |         1.607          |           8.705           |            5.691             |
-|      [c++](https://en.wikipedia.org/wiki/C%2B%2B)     |    ?    |                   3.585                    |         3.498          |           8.542           |            5.672             |
