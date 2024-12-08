@@ -10,4 +10,4 @@ This was supposed to be single-threaded test, but Go language & Java use a bit m
 
 Custom C++ (maincustom.c++) is just to show that in C++ you can often write your own code for your scenario to even further improve performance of your code. It has custom random operations, custom dictionary and custom string to achieve this. Speed improvements can be quite significant. You can probably do so also in C#, but with higher level languages, you probably do not want to spend time on this.
 
-![comp](./images/perfcomp_final.png)
+![comp](./images/perfcomp_final_manjaro.png)
