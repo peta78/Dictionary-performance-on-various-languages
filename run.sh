@@ -31,7 +31,7 @@ install_pck() {
                 sudo dnf install $pkg
                 ;;
             2)
-                sudo pacman -S $pkg
+                sudo pacman -S --noconfirm $pkg
                 ;;
             3)
                 apk add $pkg
@@ -89,22 +89,22 @@ install_languages() {
     pip install -r requirements.txt
 
     # https://go.dev/dl/
-    if [ ! -f ./go1.23.3.linux-amd64.tar.gz ]; then
-        wget https://go.dev/dl/go1.23.3.linux-amd64.tar.gz
+    if [ ! -f ./go1.23.4.linux-amd64.tar.gz ]; then
+        wget https://go.dev/dl/go1.23.4.linux-amd64.tar.gz
     fi
     rm -rf ./go
-    tar -C ./ -xzf go1.23.3.linux-amd64.tar.gz
+    tar -C ./ -xzf go1.23.4.linux-amd64.tar.gz
 
 
     # https://dotnet.microsoft.com/en-us/download/dotnet
     which_install_soft
     case $answer in
         2)
-            if [ ! -f ./dotnet-sdk-8.0.403-linux-x64.tar.gz ]; then
-                wget https://download.visualstudio.microsoft.com/download/pr/ca6cd525-677e-4d3a-b66c-11348a6f920a/ec395f498f89d0ca4d67d903892af82d/dotnet-sdk-8.0.403-linux-x64.tar.gz
+            if [ ! -f ./dotnet-sdk-9.0.101-linux-x64.tar.gz ]; then
+                wget https://download.visualstudio.microsoft.com/download/pr/d74fd2dd-3384-4952-924b-f5d492326e35/e91d8295d4cbe82ba3501e411d78c9b8/dotnet-sdk-9.0.101-linux-x64.tar.gz
             fi
             mkdir ./dotnet
-            tar zxf dotnet-sdk-8.0.403-linux-x64.tar.gz -C ./dotnet
+            tar zxf dotnet-sdk-9.0.101-linux-x64.tar.gz -C ./dotnet
             ;;
         3)
             if [ ! -f ./dotnet-sdk-8.0.401-linux-musl-x64.tar.gz ]; then
@@ -119,7 +119,9 @@ install_languages() {
     export PATH=$PATH:./dotnet
 
     # https://www.rust-lang.org/tools/install
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    curl --proto '=https' --tlsv1.2 -sSf -y https://sh.rustup.rs >> rustup.sh
+    sudo chmod +x rustup.sh
+    rustup.sh -y
 }
 
 compile_source() {
@@ -146,6 +148,9 @@ get_language_versions() {
 }
 
 clean_up
+
+#exit 1
+
 install_languages
 compile_source
 get_language_versions
@@ -171,7 +176,7 @@ do
     sleep 1
     java MainJava >> java.perf$i
     sleep 1
-    ./bin/Release/net8.0/main >> c#.perf$i
+    ./bin/Release/net9.0/main >> c#.perf$i
     sleep 1
     julia main.julia >> julia.perf$i
     sleep 1
