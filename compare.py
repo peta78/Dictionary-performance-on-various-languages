@@ -210,11 +210,6 @@ print(yy)
 print(x)
 
 f = open("./results_os/{}.txt".format(get_name()), "wt")
-f.write('\n')
-f.write(yy)
-f.write('\n')
-# https://github.com/jazzband/prettytable/issues/50
-# x.set_style(MARKDOWN)
 f.write(x.get_string())
 f.write('\n')
 f.close()

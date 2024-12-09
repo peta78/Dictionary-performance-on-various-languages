@@ -185,6 +185,5 @@ kill -9 $PID
 
 python3 compare.py
 
-cat ./results_os/md_start.md ./results_os/*.txt ./results_os/md_end.md > ./README.md
 
 
