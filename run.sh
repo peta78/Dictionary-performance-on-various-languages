@@ -107,11 +107,11 @@ install_languages() {
             tar zxf dotnet-sdk-9.0.101-linux-x64.tar.gz -C ./dotnet
             ;;
         3)
-            if [ ! -f ./dotnet-sdk-8.0.401-linux-musl-x64.tar.gz ]; then
-                wget https://download.visualstudio.microsoft.com/download/pr/3ce68ecc-a007-4d15-9196-79ced76a154a/6a45f69bb5c24576abeea048cea09987/dotnet-sdk-8.0.401-linux-musl-x64.tar.gz
+            if [ ! -f ./dotnet-sdk-9.0.101-linux-musl-x64.tar.gz ]; then
+                wget https://download.visualstudio.microsoft.com/download/pr/73c11b94-0188-458f-b599-f7591718fc28/c44e21ffbf353b50ef88a76122e89e24/dotnet-sdk-9.0.101-linux-musl-x64.tar.gz
             fi
             mkdir ./dotnet
-            tar zxf dotnet-sdk-8.0.401-linux-musl-x64.tar.gz -C ./dotnet
+            tar zxf dotnet-sdk-9.0.101-linux-musl-x64.tar.gz -C ./dotnet
             ;;
     esac
 
