@@ -1,12 +1,7 @@
 from os import listdir, cpu_count
 from os.path import isfile, join
 from datetime import datetime, date, timedelta
-import matplotlib.pyplot as plt
-import pandas as pd
-from prettytable import PrettyTable
-import distro
 import platform
-#from googlesearch import search
 
 def procdt(inp):
     inp = inp.replace('\n','')
@@ -16,15 +11,6 @@ def procdt(inp):
     ret = datetime.strptime(inp, "%Y-%m-%d %H:%M:%S.%f")
 
     return ret
-
-def geturl(lang, what):
-    return lang
-    #if lang == "custom c++":
-    #    return "[custom c++](https://www.randomguy.info)"
-    #query = "{} {}".format(lang, what)
-
-    #for j in search(query, tld="co.in", num=1, stop=1, pause=2):
-    #    return "[{}]({})".format(lang,j)
 
 def process(fn):
     f = open(fn, 'rt')
@@ -68,14 +54,7 @@ def pickmedian(x):
     return x[len(x)//2]
 
 def get_name():
-    info = distro.os_release_info()
-    name = ''
-    try:
-        name = info['name']
-    except:
-        pass
-
-    return name
+    return "arch most likely"
 
 def get_version():
     info = distro.os_release_info()
@@ -138,32 +117,8 @@ while True:
 
     stats = sorted(stats, key=lambda x: sum(x[1:]))
 
-    fig, axs = plt.subplots(3)
     t, c, m = readusage()
-    axs[0].plot(t, c)
-    axs[0].set_ylim([0, 100])
-    axs[0].set_title('CPU usage on {} ({})'.format(distroname(), today.strftime("%Y-%m-%d")))
-    axs[0].set_xlim([min(times)-timedelta(seconds=1.0), max(times)+timedelta(seconds=1.0)])
-    axs[1].plot(t, m)
-    axs[1].set_ylim([min(m) * 0.99, max(m) * 1.01])
-    axs[1].set_title('Memory usage')
-    axs[1].set_xlim([min(times)-timedelta(seconds=1.0), max(times)+timedelta(seconds=1.0)])
-    for d in dic:
-        axs[2].plot([dic[d][0], dic[d][1]], [1, 1])
-        axs[2].text(dic[d][0]+(dic[d][1]-dic[d][0])/2.0, 1.2, d[:-1], rotation='vertical')
-    axs[2].set_title('Which language is running')
-    axs[2].set_xlim([min(times)-timedelta(seconds=1.0), max(times)+timedelta(seconds=1.0)])
-    axs[2].set_ylim([0, 3])
-    axs[2].yaxis.set_visible(False) 
-    plt.gcf().set_size_inches(13, 13)
-    plt.savefig('cpumem' + str(round) + '.png')
-    df = pd.DataFrame(stats, columns=['Language', 'Round 1', 'Round 2', 'Round 3', 'Round 4', 'Round 5'])
-    df.plot(x='Language', kind='bar', stacked=False, title='Performance on {} ({})'.format(distroname(), today.strftime("%Y-%m-%d")))
-    plt.gcf().set_size_inches(13, 13)
-    plt.savefig('perfcomp' + str(round) + '.png')
-
-    x = PrettyTable()
-    x.field_names = ['Language', 'Adjusted Time (s)', 'Time (s)', 'CPU (%)', 'Mem (%)']
+    x = []
     for s in stats:
         aa = 0.0
         ac = 0.0
@@ -173,7 +128,7 @@ while True:
                 aa += 1.0
                 ac += c[i]
                 am += m[i]
-        x.add_row([s[0], sum(s[1:])/5.0 * ac/aa / (100.0 / cpu_count()), sum(s[1:])/5.0, ac/aa, am/aa])
+        x.append([s[0], sum(s[1:])/5.0 * ac/aa / (100.0 / cpu_count()), sum(s[1:])/5.0, ac/aa, am/aa])
         if s[0][:-1] not in dicAll:
             dicAll[s[0][:-1]] = []
         dicAll[s[0][:-1]].append([sum(s[1:])/5.0 * ac/aa / (100.0 / cpu_count()), sum(s[1:])/5.0, ac/aa, am/aa])
@@ -196,20 +151,16 @@ for r in results:
 final = sorted(final, key=lambda s: s[1])
 
 ff = sorted(ff, key=lambda s: s[1])
-df = pd.DataFrame(ff, columns=['Language', 'Adjusted Time (seconds)'])
-df.plot(x='Language', kind='bar', stacked=False, title='Performance on {} ({})'.format(distroname(), today.strftime("%Y-%m-%d")))
-plt.gcf().set_size_inches(13, 13)
-plt.savefig('perfcomp_final.png')
-
-x = PrettyTable()
-x.field_names = ['Language', 'Version', 'Adjusted time based on CPU usage (seconds)', 'Average time (seconds)', 'Average CPU usage[^1] (%)', 'Average memory usage[^1] (%)']
+x = []
+x.append(['Language', 'Version', 'Adjusted time based on CPU usage (seconds)', 'Average time (seconds)', 'Average CPU usage[^1] (%)', 'Average memory usage[^1] (%)'])
 for f in final:
-    x.add_row([geturl(f[0], 'programming language'), getLangVer(f[0]),"{:.3f}".format(f[1]), "{:.3f}".format(f[2]), "{:.3f}".format(f[3]), "{:.3f}".format(f[4])])
-yy = 'Lower is better - on {} on {}:\n'.format(distroname(), today.strftime("%Y-%m-%d"))
+    x.append([f[0], getLangVer(f[0]),"{:.3f}".format(f[1]), "{:.3f}".format(f[2]), "{:.3f}".format(f[3]), "{:.3f}".format(f[4])])
+yy = 'Lower is better - on {} on {}:\n'.format("arch most likely", today.strftime("%Y-%m-%d"))
 print(yy)
-print(x)
 
 f = open("./results_os/{}.txt".format(get_name()), "wt")
-f.write(x.get_string())
-f.write('\n')
+for xx in x:
+    print(xx)
+    f.write(str(xx))
+    f.write('\n')
 f.close()
