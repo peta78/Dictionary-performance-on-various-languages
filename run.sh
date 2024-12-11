@@ -75,15 +75,11 @@ install_languages() {
     install_pck
     pkg=nodejs
     install_pck
-    pkg=py3-prettytable
+    pkg=python3-psutil
     install_pck
     pkg=py3-psutil
     install_pck
-    pkg=py3-matplotlib
-    install_pck
-    pkg=py3-pandas
-    install_pck
-    pkg=py3-distro
+    pkg=neofetch
     install_pck
 
     pip install -r requirements.txt
