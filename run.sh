@@ -59,6 +59,8 @@ clean_up() {
 install_languages() {
     pkg=python3
     install_pck
+    pkg=python3-pip
+    install_pck
     pkg=sudo
     install_pck
     pkg=wget
@@ -82,7 +84,10 @@ install_languages() {
     pkg=neofetch
     install_pck
 
+    python3 -ensurepip
     pip install -r requirements.txt
+    pip3 install -r requirements.txt
+    neofetch >> os.info
 
     # https://go.dev/dl/
     if [ ! -f ./go1.23.4.linux-amd64.tar.gz ]; then
