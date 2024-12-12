@@ -55,8 +55,8 @@ def pickmedian(x):
 def distroname():
     f = open('os.info', 'rt')
     
-    lines = f.readlines()
-    for line in lines:
+    oslines = f.readlines()
+    for line in oslines:
         line = line.encode('ascii')
         if b'OS\x1b[0m\x1b[0m:\x1b[0m ' in line:
             p1 = line.find(b' ')+1
@@ -64,7 +64,7 @@ def distroname():
             line = line[p1:p2].decode('utf-8')
             osname = line
     
-    return osname
+    return osname, oslines
     
 def getLangVer(lang):
     ret = ''
@@ -155,9 +155,13 @@ for f in final:
 yy = 'Lower is better - on {} on {}:\n'.format("arch most likely", today.strftime("%Y-%m-%d"))
 print(yy)
 
-f = open("./results_os/{}.txt".format(distroname()), "wt")
+distro_name, os_lines = distroname()
+f = open("./results_os/{}.txt".format(distro_name), "wt")
 for xx in x:
     print(xx)
     f.write(str(xx))
     f.write('\n')
+f.write('\n')
+for line in os_lines:
+    f.write(line)
 f.close()
