@@ -1,7 +1,6 @@
 from os import listdir, cpu_count
 from os.path import isfile, join
 from datetime import datetime, date, timedelta
-import platform
 
 def procdt(inp):
     inp = inp.replace('\n','')
@@ -53,21 +52,19 @@ def pickmedian(x):
 
     return x[len(x)//2]
 
-def get_name():
-    return "arch most likely"
-
-def get_version():
-    info = distro.os_release_info()
-    version = ''
-    try:
-        version = info['version']
-    except:
-        pass
-
-    return version
-
 def distroname():
-    return '{} {}\n{}'.format(geturl(get_name(), 'operating system'), get_version(), platform.platform())
+    f = open('os.info', 'rt')
+    
+    lines = f.readlines()
+    for line in lines:
+        line = line.encode('ascii')
+        if b'OS\x1b[0m\x1b[0m:\x1b[0m ' in line:
+            p1 = line.find(b' ')+1
+            p2 = line.find(b'\x1b[0m', p1)
+            line = line[p1:p2].decode('utf-8')
+            osname = line
+    
+    return osname
     
 def getLangVer(lang):
     ret = ''
@@ -158,7 +155,7 @@ for f in final:
 yy = 'Lower is better - on {} on {}:\n'.format("arch most likely", today.strftime("%Y-%m-%d"))
 print(yy)
 
-f = open("./results_os/{}.txt".format(get_name()), "wt")
+f = open("./results_os/{}.txt".format(distroname()), "wt")
 for xx in x:
     print(xx)
     f.write(str(xx))
