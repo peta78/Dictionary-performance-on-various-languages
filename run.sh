@@ -100,7 +100,7 @@ install_languages() {
     # https://dotnet.microsoft.com/en-us/download/dotnet
     which_install_soft
     case $answer in
-        2)
+        0|1|2)
             if [ ! -f ./dotnet-sdk-9.0.101-linux-x64.tar.gz ]; then
                 wget https://download.visualstudio.microsoft.com/download/pr/d74fd2dd-3384-4952-924b-f5d492326e35/e91d8295d4cbe82ba3501e411d78c9b8/dotnet-sdk-9.0.101-linux-x64.tar.gz
             fi
