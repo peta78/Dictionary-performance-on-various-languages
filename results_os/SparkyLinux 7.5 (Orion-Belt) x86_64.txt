@@ -1,0 +1,53 @@
+['Language', 'Version', 'Adjusted time based on CPU usage (seconds)', 'Average time (seconds)', 'Average CPU usage[^1] (%)', 'Average memory usage[^1] (%)']
+['custom c++', '(0,0)', '0.279', '0.275', '6.349', '16.156']
+['c++', '++ ( 12.2.0-14) 12.2.0', '1.552', '1.517', '6.394', '11.026']
+['javascript', '18.19.0', '1.803', '1.643', '6.857', '11.351']
+['go', '  1.23.4 /64', '3.300', '2.225', '9.271', '11.848']
+['perl', '   5,  36,  0 (5.36.0)   86_64----', '3.453', '3.381', '6.382', '12.229']
+['python3', ' 3.11.2', '10.945', '10.783', '6.344', '10.792']
+
+[?25l[?7l[0m[31m[1m
+           .            `-:-`
+          .o`       .-///-`
+         `oo`    .:/++:.
+         os+`  -/+++:` ``.........```
+        /ys+`./+++/-.-::::::----......``
+       `syyo`++o+--::::-::/+++/-``
+       -yyy+.+o+`:/:-:sdmmmmmmmmdy+-`
+::-`   :yyy/-oo.-+/`ymho++++++oyhdmdy/`
+`/yy+-`.syyo`+o..o--h..osyhhddhs+//osyy/`
+  -ydhs+-oyy/.+o.-: ` `  :/::+ydhy+```-os-
+   .sdddy::syo--/:.     `.:dy+-ohhho    ./:
+     :yddds/:+oo+//:-`- /+ +hy+.shhy:     ``
+      `:ydmmdysooooooo-.ss`/yss--oyyo
+        `./ossyyyyo+:-/oo:.osso- .oys
+       ``..-------::////.-oooo/   :so
+    `...----::::::::--.`/oooo:    .o:
+           ```````     ++o+:`     `:`
+                     ./+/-`        `
+                   `-:-.
+                   ``[0m
+[21A[9999999D[47C[0m[1m[31m[1mpepe[0m@[31m[1mpepe-83dr[0m 
+[47C[0m--------------[0m 
+[47C[0m[31m[1mOS[0m[0m:[0m SparkyLinux 7.5 (Orion-Belt) x86_64[0m 
+[47C[0m[31m[1mHost[0m[0m:[0m 83DR IdeaPad 5 2-in-1 14AHP9[0m 
+[47C[0m[31m[1mKernel[0m[0m:[0m 6.1.0-25-amd64[0m 
+[47C[0m[31m[1mUptime[0m[0m:[0m 12 mins[0m 
+[47C[0m[31m[1mPackages[0m[0m:[0m 2153 (dpkg)[0m 
+[47C[0m[31m[1mShell[0m[0m:[0m bash 5.2.15[0m 
+[47C[0m[31m[1mResolution[0m[0m:[0m 1920x1200[0m 
+[47C[0m[31m[1mDE[0m[0m:[0m LXQt 1.2.0[0m 
+[47C[0m[31m[1mWM[0m[0m:[0m Openbox[0m 
+[47C[0m[31m[1mWM Theme[0m[0m:[0m Sparky7[0m 
+[47C[0m[31m[1mTheme[0m[0m:[0m Sparky6 [GTK2], Sparky7 [GTK3][0m 
+[47C[0m[31m[1mIcons[0m[0m:[0m Tela [GTK2/3][0m 
+[47C[0m[31m[1mTerminal[0m[0m:[0m qterminal[0m 
+[47C[0m[31m[1mCPU[0m[0m:[0m AMD Ryzen 7 8845HS w/ Radeon 780M Graphics (16) @ 3.800GHz[0m 
+[47C[0m[31m[1mGPU[0m[0m:[0m AMD ATI 04:00.0 Phoenix3[0m 
+[47C[0m[31m[1mMemory[0m[0m:[0m 814MiB / 13734MiB[0m 
+
+[47C[30m[40m   [31m[41m   [32m[42m   [33m[43m   [34m[44m   [35m[45m   [36m[46m   [37m[47m   [m
+[47C[38;5;8m[48;5;8m   [38;5;9m[48;5;9m   [38;5;10m[48;5;10m   [38;5;11m[48;5;11m   [38;5;12m[48;5;12m   [38;5;13m[48;5;13m   [38;5;14m[48;5;14m   [38;5;15m[48;5;15m   [m
+
+
+[?25h[?7h
