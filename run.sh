@@ -120,7 +120,7 @@ install_languages() {
     export PATH=$PATH:./dotnet
 
     # https://www.rust-lang.org/tools/install
-    curl --proto '=https' --tlsv1.2 -sSf -y https://sh.rustup.rs >> rustup.sh
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs >> rustup.sh
     sudo chmod +x rustup.sh
     rustup.sh -y
 }
